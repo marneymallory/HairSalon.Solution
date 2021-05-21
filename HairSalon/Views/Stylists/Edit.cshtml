@@ -7,14 +7,18 @@
 
 <h2>Edit</h2>
 
-<h4>Edit this stylist: @Html.DisplayFor(model => model.Type)</h4>
+<h4>Edit this stylist: @Html.DisplayFor(model => model.Name)</h4>
 
 @using (Html.BeginForm())
 {
   @Html.HiddenFor(model => model.StylistId)
 
-  @Html.LabelFor(model => model.Type)
-  @Html.EditorFor(model => model.Type)
+  @Html.LabelFor(model => model.Name)
+  @Html.EditorFor(model => model.Name)
+  @Html.LabelFor(model => model.Description)
+  @Html.EditorFor(model => model.Description)
+  @Html.LabelFor(model => model.Specialty)
+  @Html.EditorFor(model => model.Specialty)
 
   <input type="submit" value="Save" />
 }
